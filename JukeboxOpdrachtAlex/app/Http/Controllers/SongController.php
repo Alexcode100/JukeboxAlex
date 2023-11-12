@@ -4,20 +4,17 @@ namespace App\Http\Controllers;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
-use App\Models\Genre; // Add this line to import the Genre model
+use App\Models\Song;
 
-
-
-class GenreController extends Controller
+class SongController extends Controller
 {
     /**
      * Display a listing of the resource.
      */
     public function index()
     {
-        
-        return view('genres.index', [
-            'genres' => Genre::all()
+        return view('songs.index', [
+            'songs' => Song::all()
         ]);
     }
 
@@ -40,10 +37,9 @@ class GenreController extends Controller
     /**
      * Display the specified resource.
      */
-    public function showSongsByGenre($genreId)
+    public function show(string $id)
     {
-        $genre = Genre::with('songs')->find($genreId);
-        return view('songs.index', ['songs' => $genre->songs]);
+        //
     }
 
     /**

@@ -1,20 +1,20 @@
 @extends('layouts.app')
 
 @section('content')
-{{-- resources/views/genres.blade.php --}}
+{{-- resources/views/songs.blade.php --}}
 
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Genres</title>
+    <title>Songs</title>
 </head>
 <body>
-    <h1>Muziek Genres</h1>
+    <h1>Songs</h1>
     <ul>
-        @foreach ($genres as $genre)
-            <li><a href="{{ route('genres.songs', $genre->id) }}">{{ $genre->Genre }}</a></li>
+        @foreach ($songs as $song)
+            <li>{{ $song->Naam }} by {{ $song->Artiest_Band }}</li>
         @endforeach
     </ul>
 </body>

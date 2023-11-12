@@ -12,8 +12,8 @@ return new class extends Migration
     public function up(): void
     {
         Schema::create('genres', function (Blueprint $table) {
-            $table->id();
             $table->string('Genre');
+            $table->id();
             $table->timestamps();
         });
 
@@ -26,5 +26,11 @@ return new class extends Migration
     {
         Schema::dropIfExists('Genres');
     }
+
+    public function songs(){
+        return $this->hasmany(Song::class);
+    }
+
 };
+
 

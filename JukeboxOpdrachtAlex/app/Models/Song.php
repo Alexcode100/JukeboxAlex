@@ -4,10 +4,10 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
 
-class Genre extends Model
+class Song extends Model
 {
     protected $fillable = [
-        'id', 'Genre'
+        'Naam', 'id', 'Artiest_Band', 'Duur', 'genre_id'
     ]; 
 
     protected $casts = [
@@ -15,10 +15,10 @@ class Genre extends Model
         'created_at' => 'datetime',
         'updated_at' => 'datetime'
     ];
-    public function songs()
+
+    public function genre()
     {
-        return $this->hasMany(Song::class);
+        return $this->belongsTo(Genre::class, 'genre_id');
     }
+    
 }
-
-
