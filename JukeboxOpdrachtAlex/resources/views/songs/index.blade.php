@@ -14,9 +14,29 @@
     <h1>Songs</h1>
     <ul>
         @foreach ($songs as $song)
-            <li>{{ $song->Naam }} by {{ $song->Artiest_Band }}</li>
+            <li>
+                {{ $song->Naam }} door {{ $song->Artiest_Band }}
+                <button onclick="showInfo('song-info-{{ $song->id }}')">Toon Info</button>
+                <div id="song-info-{{ $song->id }}" style="display:none;">
+                    Duur: {{ $song->Duur }} seconden
+                </div>
+            </li>
         @endforeach
     </ul>
+
+    <script>
+
+        //knopje showen of niet showen on click
+        function showInfo(id) {
+            var info = document.getElementById(id);
+            if (info.style.display === "none") {
+                info.style.display = "block";
+            } else {
+                info.style.display = "none";
+            }
+        }
+    </script>
+
 </body>
 </html>
 
