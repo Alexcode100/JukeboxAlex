@@ -1,16 +1,17 @@
 @extends('layouts.app')
 
 @section('content')
-{{-- resources/views/songs.blade.php --}}
 
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <link href="{{ asset('css/app.css') }}" rel="stylesheet">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Songs</title>
 </head>
 <body>
+    @include('layouts.navbar')
     <h1>Songs</h1>
     <ul>
         @foreach ($songs as $song)
@@ -26,7 +27,7 @@
 
     <script>
 
-        //knopje showen of niet showen on click
+        //knopje showen of niet showen wanneer je erop clickt
         function showInfo(id) {
             var info = document.getElementById(id);
             if (info.style.display === "none") {

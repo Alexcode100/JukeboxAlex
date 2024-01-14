@@ -8,7 +8,7 @@ class Genre extends Model
 {
     protected $fillable = [
         'id', 'Genre'
-    ]; 
+    ];
 
     protected $casts = [
 
@@ -20,5 +20,3 @@ class Genre extends Model
         return $this->hasMany(Song::class);
     }
 }
-
-

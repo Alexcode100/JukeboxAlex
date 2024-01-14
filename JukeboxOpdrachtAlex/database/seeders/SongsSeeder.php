@@ -40,8 +40,7 @@ class SongsSeeder extends Seeder
             ['Naam' => 'Resurrection', 'Artiest_Band' => 'Elevation', 'Duur' => 320, 'genre_id' => $phonkGenreId],
             ['Naam' => 'Drift', 'Artiest_Band' => 'Phonkha', 'Duur' => 210, 'genre_id' => $phonkGenreId],
             ['Naam' => 'Lost Souls', 'Artiest_Band' => 'Hensonn', 'Duur' => 305, 'genre_id' => $phonkGenreId],
-            
-            // Voeg hier meer nummers toe zoals nodig
+
         ];
 
         DB::table('songs')->insert($songs);

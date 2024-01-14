@@ -16,7 +16,6 @@ return new class extends Migration
             $table->id();
             $table->timestamps();
         });
-
     }
 
     /**
@@ -26,11 +25,4 @@ return new class extends Migration
     {
         Schema::dropIfExists('Genres');
     }
-
-    public function songs(){
-        return $this->hasmany(Song::class);
-    }
-
 };
-
-

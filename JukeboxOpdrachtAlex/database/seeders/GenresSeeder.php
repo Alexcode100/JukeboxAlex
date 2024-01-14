@@ -9,9 +9,6 @@ use Illuminate\Support\Str;
 
 class GenresSeeder extends Seeder
 {
-    /**
-     * Run the database seeds.
-     */
     public function run(): void
     {
         $genres = [

@@ -8,7 +8,7 @@
 
   <div class="container">
 
-    <h1> Homepagina!</h1>
+    <h1> login!</h1>
     @yield('content')
   </div>
 
